@@ -1,0 +1,25 @@
+{
+  "name": "automation-saucedemo",
+  "version": "1.0.0",
+  "description": "Automation tests for saucedemo page",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run cypress:run",
+    "cypress:open": "npx cypress open",
+    "cypress:run": "npx cypress run",
+    "cypress:run:chrome": "npx cypress run --browser chrome",
+    "cypress:run:headed": "npx cypress run --headed",
+    "cypress:verify": "npx cypress verify",
+    "cypress:run:staging": "npx run --env envName=staging",
+    "cypress:run:production": "npx run --env envName=production",
+    "cypress:report:generate": "npx mochawesome-merge \"cypress/results/*.json\" > mochawesome/merge-results.json && npx marge mochawesome/merge-results.json --reportDir cypress/reports/html"
+  },
+  "author": "Andrea Michael Acuña Acosta",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^14.4.0",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^5.0.0",
+    "mochawesome-report-generator": "^6.2.0"
+  }
+}
